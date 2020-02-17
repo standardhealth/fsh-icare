@@ -11,7 +11,7 @@ Extension:  CarePlanReview
 Id: icare-care-plan-review
 Description:    "Documentation of a re-assessment of the Care Plan, which may or may not lead to a revision of the plan. The fact the assessment has been conducted should be documented even when the Care Plan is not changed.
 Implementation note: A ReasonCode is required when ChangedFlag is true."
-* value[x] 0..0
+//* value[x] 0..0
 * extension contains 
     ReviewedBy 0..1 and
     ReviewDate 1..1 MS and
@@ -20,16 +20,16 @@ Implementation note: A ReasonCode is required when ChangedFlag is true."
     CommentOrDescription 0..1
 * extension[ReviewedBy].value[x] only Reference
 * extension[ReviewedBy].valueReference only Reference(Practitioner)
-* extension[ReviewedBy].extension 0..0
+//* extension[ReviewedBy].extension 0..0
 * extension[ReviewDate].value[x] only date
-* extension[ReviewDate].extension 0..0
+//* extension[ReviewDate].extension 0..0
 * extension[ChangedFlag].value[x] only boolean
-* extension[ChangedFlag].extension 0..0
+//* extension[ChangedFlag].extension 0..0
 * extension[CarePlanChangeReason].value[x] only CodeableConcept
 * extension[CarePlanChangeReason].valueCodeableConcept from CarePlanChangeReasonVS (required)
-* extension[CarePlanChangeReason].extension 0..0
+//* extension[CarePlanChangeReason].extension 0..0
 * extension[CommentOrDescription].value[x] only string
-* extension[CommentOrDescription].extension 0..0
+//* extension[CommentOrDescription].extension 0..0
 
 ValueSet:	    CarePlanChangeReasonVS
 Id: icare-care-plan-change-reason-vs
