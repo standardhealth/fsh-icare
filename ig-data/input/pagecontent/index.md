@@ -5,7 +5,7 @@
 
 <p>The overall goal of the <a href="http://icaredata.org/" target="_blank">ICAREdata project</a> is to support the prospective collection of high quality real-world data, based on <a href="http://mcodeinitiative.org" target="_blank">mCODE&trade;</a>, to enable clinical oncology research.</p>
 
-<p>The Integrating Clinical trials And Real-world Endpoints data (ICAREdata) project is a collaboration between The MITRE Corporation, the Alliance for Clinical Trials in Oncology, and the hello National Cancer Institute (NCI). The project is conducting a study to demonstrate the ability to use high-quality mCODE-based real-world data in a clinical trial setting.</p>
+<p>The Integrating Clinical trials And Real-world Endpoints data (ICAREdata) project is a collaboration between The MITRE Corporation, the Alliance for Clinical Trials in Oncology, and the National Cancer Institute (NCI). The project is conducting a study to demonstrate the ability to use high-quality mCODE-based real-world data in a clinical trial setting.</p>
 
 <h1>ICAREdata and mCODE</h1>
 
