@@ -28,11 +28,13 @@
 <h1>Known Issues and Limitations</h1>
 <p>The profiles in this implementation guide may have dependencies on content in other implementation guides, namely mCODE. These dependencies may not always resolve in the profile.</p>
 -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <h1><a name="Contacts"></a>Contact Information</h1>
 
-    <p>For inquiries regarding ICAREdata Project, contact <a href="mailto:mchan@mitre.org">Miranda Chan</a>.</p>
-    <p>For questions or issues related to this implementation guide, please use our <a href="https://standardhealthrecord.atlassian.net/projects/SHRM/issues">SHR Core Models JIRA issue tracker</a>.</p>
-    <p>For questions or issues regarding the content of mCODE implementation guide, please use the <a href="https://standardhealthrecord.atlassian.net/projects/MCODE/issues/">mCODE JIRA issue tracker</a>.</p>
+<p>For inquiries regarding ICAREdata Project, contact <a href="mailto:mchan@mitre.org">Miranda Chan</a>.</p>
+<p>For questions or issues related to this implementation guide, please use our <a href="https://standardhealthrecord.atlassian.net/projects/SHRM/issues">SHR Core Models JIRA issue tracker</a>.</p>
+<p>For questions or issues regarding the content of mCODE implementation guide, please use the <a href="https://standardhealthrecord.atlassian.net/projects/MCODE/issues/">mCODE JIRA issue tracker</a>.</p>
     
    </div>
