@@ -1,3 +1,10 @@
+<style type="text/css">
+  .img-container {
+      text-align: center;
+      display: block;
+    }
+</style>
+
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
 
@@ -19,8 +26,9 @@
 <p>ICAREdata structured phrase questions and value sets are intended to be mapped to FHIR resources compliant with the requirements specified in the mCODE and ICAREdata implementation guides. This includes mapping 1) the ICAREdata question to the appropriate FHIR resource and element, and 2) the associated value to the appropriate vocabulary defined in the specification.</p>
 
 <p>The figure below illustrates how ICAREdata structured phrases relate to FHIR profiles and implementation guides.</p>
-<img src="icaredata_fhir.png" alt="ICAREdata and FHIR" width="65%" align="middle" style="margin: 0px 400px 0px 0px;"/>
-
+<span class="img-container">
+    <img src="icaredata_fhir.png" alt="ICAREdata and FHIR" width="65%">
+</span>
 <p>&nbsp;</p>
 
 <p>For details on mapping guidance for specific ICAREdata structured phrases, please consult <a href="mapping_guidance.html"> ICAREdata to FHIR mapping guidance</a>.</p>
@@ -32,7 +40,7 @@
 <h1><a name="Contacts"></a>Contact Information</h1>
 
 <p>For inquiries regarding ICAREdata Project, contact <a href="mailto:sirivinti@mitre.org">Ammu Irivinti</a>.</p>
-<p>For questions or issues related to this implementation guide, please use our <a href="https://standardhealthrecord.atlassian.net/projects/SHRM/issues">SHR Core Models JIRA issue tracker</a>.</p>
+<p>For questions or issues related to this implementation guide, please use our <a href="https://github.com/standardhealth/fsh-icare/issues">GitHub issue tracker</a>.</p>
 <p>For questions or issues regarding the content of mCODE implementation guide, please use the <a href="https://standardhealthrecord.atlassian.net/projects/MCODE/issues/">mCODE JIRA issue tracker</a>.</p>
     
    </div>

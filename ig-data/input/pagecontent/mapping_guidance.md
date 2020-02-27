@@ -27,7 +27,7 @@
 <h2>Cancer Disease Status</h2>
 
   <p>The Cancer Disease Status structured phrase maps to the mCODE CancerDiseaseStatus profile. Mapping details are provided in Table 1 below. </p>
-  <p>For more information on the CancerDiseaseStatus profile, please consult the <a href="http://standardhealthrecord.org/guides/mcode/" target="_blank">mCODE specification</a>.</p>
+  <p>For more information on the CancerDiseaseStatus profile, please consult the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE specification</a>.</p>
 
 <table class="tg">
   <caption>Table 1. Mapping of ICAREdata Cancer Disease Status structured phrase to the mCODE CancerDiseaseStatus profile</caption>
