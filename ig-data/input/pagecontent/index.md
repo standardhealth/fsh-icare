@@ -16,7 +16,7 @@
 
 <h1>ICAREdata and mCODE</h1>
 
-<p>This implementation guide intends to cover content necessary for ICAREdata that is not part of the <a href="http://standardhealthrecord.org/guides/mcode/" target="_blank">mCODE v1.0 R4 specification</a>. Implementers should refer directly to mCODE for the specification of all mCODE elements.</p>
+<p>This implementation guide intends to cover content necessary for ICAREdata that is not part of the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE v1.0 R4 specification</a>. Implementers should refer directly to mCODE for the specification of all mCODE elements.</p>
 <p>The mCODE implementation guide includes information on how to interpret conformance requirements as well as elements marked as "must support". This implementation guide follows those same guidelines.</p>
 
 <h1>Structured phrases, mCODE and the ICAREdata IG</h1>
@@ -40,7 +40,7 @@
 <h1><a name="Contacts"></a>Contact Information</h1>
 
 <p>For inquiries regarding ICAREdata Project, contact <a href="mailto:sirivinti@mitre.org">Ammu Irivinti</a>.</p>
-<p>For questions or issues related to this implementation guide, please use our <a href="https://github.com/standardhealth/fsh-icare/issues">GitHub issue tracker</a>.</p>
-<p>For questions or issues regarding the content of mCODE implementation guide, please use the <a href="https://standardhealthrecord.atlassian.net/projects/MCODE/issues/">mCODE JIRA issue tracker</a>.</p>
+<p>For questions or issues related to this implementation guide, please use our <a href="https://github.com/standardhealth/fsh-icare/issues">ICAREdata GitHub issue tracker</a>.</p>
+<p>For questions or issues regarding the content of mCODE implementation guide, please use the <a href="https://github.com/standardhealth/fsh-mcode/issues">mCODE GitHub issue tracker</a>.</p>
     
    </div>
