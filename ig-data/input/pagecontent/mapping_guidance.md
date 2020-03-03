@@ -1,48 +1,63 @@
+<style type="text/css">
+    .tg  {font-size:90%;border-collapse:collapse;border-spacing:0;border-color:#ccc;margin-left:auto; margin-right:auto; width:80%}
+    .tg td{padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:bold;border-top-width:1px;border-bottom-width:1px;border-color:#ccc;color:#333;background-color:#fff;text-align:center;vertical-align:middle}
+    .tg th{font-weight:bold;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#ccc;color:#333;background-color:#f0f0f0;text-align:center;vertical-align:middle}
+    .tg caption{padding:10px 5px; font-weight:bold}
+    .tg .tg-bold{font-weight:bold;border-color:inherit;text-align:center;vertical-align:middle}
+    .tg .tg-altbck{background-color:#f9f9f9;border-color:inherit;text-align:center;vertical-align:middle}
+    .tg .tg-altbck-bold{background-color:#f9f9f9;font-weight:bold;border-color:inherit;text-align:center;vertical-align:middle}
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
+    </style>
+
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
-<h1>ICAREdata&reg; Structured Phrases to mCODE&trade; DSTU2 FHIR Mapping Guidance</h1>
+<h1>ICAREdata&reg; Structured Phrases to mCODE&trade; Mapping Guidance</h1>
 
 <p>There are currently two structured phrases, including:</p>
-    <ul>
-      <li><strong>Cancer Disease Status</strong>, which maps to the mCODE CancerDisease Status profile; and</li>
-      <li><strong>Cancer Treatment Plan Change</strong>, which maps to the CarePlanWithReview profile defined in this implementation guide.</li>
-    </ul>
-<p>The mapping details for each strcutured phrase are provided below, and are aligned with mCODE v0.9.1 (FHIR DSTU2).</p>
+  <ul>
+    <li><strong>Cancer Disease Status</strong>, which maps to the mCODE CancerDiseaseStatus profile; and</li>
+    <li><strong>Cancer Treatment Plan Change</strong>, which maps to the CarePlanWithReview profile defined in this implementation guide.</li>
+  </ul>
+<p>The mapping details for each structured phrase are provided below, and are aligned with mCODE v1.0 FHIR R4.</p>
 
 <h2>Cancer Disease Status</h2>
 
   <p>The Cancer Disease Status structured phrase maps to the mCODE CancerDiseaseStatus profile. Mapping details are provided in Table 1 below. </p>
-  <p>For more information on the CancerDiseaseStatus profile, please consult the <a href="http://standardhealthrecord.org/guides/mcode/" target="_blank">mCODE 0.9.1 DSTU2 specification</a>.</p>
+  <p>For more information on the CancerDiseaseStatus profile, please consult the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE specification</a>.</p>
 
 <table class="tg">
   <caption>Table 1. Mapping of ICAREdata Cancer Disease Status structured phrase to the mCODE CancerDiseaseStatus profile</caption>
   <tr>
     <th class="tg-bold" colspan="2">ICAREdata Cancer Disease Status Phrase</th>
-    <th class="tg-bold" colspan="5">mCODE DSTU2 CancerDiseaseStatus Profile Mapping</th>
+    <th class="tg-bold" colspan="5">mCODE v1.0 FHIR R4 CancerDiseaseStatus Profile Mapping</th>
   </tr>
   <tr>
-    <th class="tg-bold" rowspan="2">Phrase Component</td>
-    <th class="tg-bold" rowspan="2">Phrase Component Value</td>
-    <th class="tg-bold" rowspan="2">FHIR Profile Element</td>
-    <th class="tg-bold" colspan="3">Terminology Binding</td>
-    <th class="tg-bold" rowspan="2">Notes</td>
+    <th class="tg-bold" rowspan="2">Phrase Component</th>
+    <th class="tg-bold" rowspan="2">Phrase Component Value</th>
+    <th class="tg-bold" rowspan="2">FHIR Profile Element</th>
+    <th class="tg-bold" colspan="3">Terminology Binding</th>
+    <th class="tg-bold" rowspan="2">Notes</th>
   </tr>
   <tr>
-    <th class="tg-bold">Value Set</td>
-    <th class="tg-bold">Code</td>
-    <th class="tg-bold">Description</td>
+    <th class="tg-bold">Value Set</th>
+    <th class="tg-bold">Code</th>
+    <th class="tg-bold">Description</th>
   </tr>
   <tr>
     <td class="tg-bold" rowspan="3">Lesion evaluated</td>
     <td class="tg-bold">Primary tumor</td>
     <td class="tg-altbck" rowspan="2"><p>modifierExtension.relatedCancerCondition.ValueReference</p><p></p></td>
     <td colspan ="3">n/a</td>
-    <td class="tg-altbck"><p>This element should reference an <Condition> resource compliant with the </Condition>the <code>PrimaryCancerCondition</code> mCODE profile.</p></td>
+    <td class="tg-altbck"><p>This element should reference a <Condition> resource compliant with the </Condition>the <code>PrimaryCancerCondition</code> mCODE profile.</p></td>
   </tr>
   <tr>
       <td class="tg-bold">Metastatic tumor</td>
       <td colspan="3">n/a</td>
-      <td class="tg-altbck"><p><p>This element should reference an <Condition> resource compliant with the </Condition>the <code>SecondaryCancerCondition</code> mCODE profile.</p></td>
+      <td class="tg-altbck"><p>This element should reference a <Condition> resource compliant with the </Condition>the <code>SecondaryCancerCondition</code> mCODE profile.</p></td>
   </tr>
   <tr>
       <td class="tg-bold">Not evaluated</td>
@@ -53,30 +68,36 @@
       <td class="tg-altbck"></td>
   </tr>
   <tr>
-      <td class="tg-bold" rowspan="4">Status</td>
+      <td class="tg-bold" rowspan="5">Status</td>
       <td class="tg-bold">No evidence of disease</td>
-      <td class="tg-altbck" rowspan="4">valueCodeableConcept</td>
-      <td rowspan="4">ConditionStatusTrendVS</td>
+      <td class="tg-altbck" rowspan="5">valueCodeableConcept</td>
+      <td rowspan="5">ConditionStatusTrendVS</td>
       <td><code>260415000</code></td>
-      <td>In full remission (qualifier value). Use this term for expressing NED (no evidence of<br>disease), condition resolved, or full remission.</td>
+      <td>Not detected (qualifier)</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
       <td class="tg-bold">Responding</td>
-      <td><code>385633008</code></td>
-      <td>Improving (qualifier value)</td>
+      <td><code>268910001</code></td>
+      <td>Patient condition improved (finding)</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
       <td class="tg-bold">Stable</td>
-      <td><code>58158008</code></td>
-      <td>Stable (qualifier value)</td>
+      <td><code>359746009</code></td>
+      <td>Patient's condition stable (finding)</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
       <td class="tg-bold">Progressing</td>
-      <td><code>230993007</code></td>
-      <td>Worsening (qualifier value)</td>
+      <td><code>271299001</code></td>
+      <td>Patient's condition worsened (finding)</td>
+      <td class="tg-altbck"></td>
+  </tr>
+  <tr>
+      <td class="tg-bold">Undetermined</td>
+      <td><code>709137006</code></td>
+      <td>Patient condition undetermined (finding)</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
@@ -107,34 +128,34 @@
       <td class="tg-altbck"></td>
   </tr>
   <tr>
-      <td class="tg-bold">Tumor marker</td>
-      <td><code>250724005</code></td>
-      <td>Tumor marker measurement (procedure)</td>
+      <td class="tg-bold">Lab results</td>
+      <td><code>386344002</code></td>
+      <td>Laboratory data interpretation (procedure)</td>
       <td class="tg-altbck"></td>
   </tr>
 </table>
 
 <h2>Cancer Treatment Plan Change</h2>
 
-<p>The ICAREdata Cancer Treatment Plan Change structured phrase maps to the ICAREdata FHIR profile CarePlanWithReview defined in this implementation guide.</p>
+<p>The ICAREdata Cancer Treatment Plan Change structured phrase maps to the CodeX ICAREdata FHIR profile CarePlanWithReview defined in this implementation guide.</p>
 
-<p>The allowable values for the structured phrase include information about whether a treatment change was made, as well as a reason, when a change did take place. In the ICAREdata FHIR profile, this translates into two separate elements: one that captures whether a change took place, and another that holds the reason for the change. Mapping details for this structured phrase are provided in Table 2 below.</p>
+<p>The allowable values for the structured phrase include information about whether a treatment change was made, as well as a reason, when a change did take place. In the CarePlanWithReview profile, this translates into two separate elements: one that captures whether a change took place, and another that holds the reason for the change. Mapping details for this structured phrase are provided in Table 2 below.</p>
 
 <table class="tg">
-    <caption>Table 2. Mapping of ICAREdata Cancer Treatment Plan Change structured phrase to the ICAREdata CarePlanWithReview profile</caption>
+  <caption>Table 2. Mapping of ICAREdata Cancer Treatment Plan Change structured phrase to the CodeX ICAREdata CarePlanWithReview profile</caption>
   <tr>
     <th class="tg-bold">ICAREdata Cancer Treatment Plan Change Phrase</th>
-    <th class="tg-bold" colspan="5">mCODE DSTU2 CancerDiseaseStatus Profile Mapping</th>
+    <th class="tg-bold" colspan="4">ICAREdata CarePlanWithReview Profile Mapping</th>
   </tr>
   <tr>
-    <th class="tg-bold" rowspan="2">Phrase Value</td>
-    <th class="tg-bold" rowspan="2">FHIR Profile Element</td>
-    <th class="tg-bold" colspan="3">Terminology Binding</td>
+    <th class="tg-bold" rowspan="2">Phrase Value</th>
+    <th class="tg-bold" rowspan="2">FHIR Profile Element</th>
+    <th class="tg-bold" colspan="3">Terminology Binding</th>
   </tr>
   <tr>
-    <th class="tg-bold">Value Set</td>
-    <th class="tg-bold">Code</td>
-    <th class="tg-bold">Description</td>
+    <th class="tg-bold">Value Set</th>
+    <th class="tg-bold">Code</th>
+    <th class="tg-bold">Description</th>
   </tr>
   <tr>
     <td class="tg-bold">No change in treatment plan</td>
