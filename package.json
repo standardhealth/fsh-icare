@@ -2,7 +2,7 @@
     "name": "icare",
     "version" : "1.0.0",  
     "canonical" : "http://mcodeinitiative.org/codex/us/icare",
-    "url" : "http://hl7.org/fhir/us/mcode/ImplementationGuide/codex.us.icare",
+    "url" : "http://mcodeinitiative.org/codex/us/icare",
     "title" : "CodeX Implementation Guide: ICAREdata",
     "description": "The ICAREdata project supports the prospective collection of high quality real-world data to enable clinical oncology research.",
     "dependencies": {
