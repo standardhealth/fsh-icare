@@ -39,7 +39,7 @@
 
 <h1><a name="Contacts"></a>Contact Information</h1>
 
-<p>For inquiries regarding ICAREdata Project, contact <a href="mailto:sirivinti@mitre.org">Ammu Irivinti</a>.</p>
+<p>For inquiries regarding ICAREdata Project, contact <a href="mailto:icaredata@alliancefoundationtrials.org">ICAREdata Team</a>.</p>
 <p>For questions or issues related to this implementation guide, please use our <a href="https://github.com/standardhealth/fsh-icare/issues">ICAREdata GitHub issue tracker</a>.</p>
 <p>For questions or issues regarding the content of mCODE implementation guide, please use the <a href="https://github.com/standardhealth/fsh-mcode/issues">mCODE GitHub issue tracker</a>.</p>
     

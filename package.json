@@ -1,8 +1,8 @@
 {
     "name": "icare",
-    "version" : "0.2.0",  
+    "version" : "1.0.0",  
     "canonical" : "http://mcodeinitiative.org/codex/us/icare",
-    "url" : "http://hl7.org/fhir/us/mcode/ImplementationGuide/codex.us.icare",
+    "url" : "http://mcodeinitiative.org/codex/us/icare",
     "title" : "CodeX Implementation Guide: ICAREdata",
     "description": "The ICAREdata project supports the prospective collection of high quality real-world data to enable clinical oncology research.",
     "dependencies": {
@@ -28,9 +28,9 @@
     ],
     "maintainers": [
       {
-        "name": "Mark Kramer",
-        "organization": "The MITRE Corporation",
-        "email": "mkramer@mitre.org"
+        "name": "ICAREdata Team",
+        "organization": "The MITRE Corporation and Alliance Foundation Trials",
+        "email": "icaredata@alliancefoundationtrials.org"
       }
     ],
     "license": "CC0-1.0"
