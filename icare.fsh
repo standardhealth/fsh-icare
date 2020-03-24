@@ -5,7 +5,7 @@ Parent:         CarePlan
 Id:             icare-care-plan-with-review
 Title:          "Care Plan with Review"
 Description:    "An extended Care Plan that includes clinical reviews and documentation of changes. The Care Plan itself describes how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions. The Care Plan tracks the progress of activities associated with the plan. The review extension includes the practitioner doing the review, date of review, whether the plan was changed, a coded reason for change, and a narrative describing the change."
-* extension contains CarePlanReview 0..* MS
+* extension contains CarePlanReview named carePlanReview 0..* MS
 
 Extension:  CarePlanReview
 Id: icare-care-plan-review
