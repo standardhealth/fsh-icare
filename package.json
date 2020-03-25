@@ -15,7 +15,7 @@
       "Real world data"
     ],
     "language": "en",
-    "author": "The MITRE Corporation",
+    "author": "The MITRE Corporation and Alliance Foundation Trials",
     "contact": [
       {
           "telecom": [
@@ -30,7 +30,8 @@
       {
         "name": "ICAREdata Team",
         "organization": "The MITRE Corporation and Alliance Foundation Trials",
-        "email": "icaredata@alliancefoundationtrials.org"
+        "email": "icaredata@alliancefoundationtrials.org",
+        "url": "https://alliancefoundationtrials.org/"
       }
     ],
     "license": "CC0-1.0"
