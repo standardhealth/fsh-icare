@@ -1,0 +1,10 @@
+{
+  "url": "http://mcodeinitiative.org/codex/us/icare/ImplementationGuide/icare",
+  "name": "CodeXImplementationGuideICAREdata",
+  "package-id": "icare",
+  "ig-ver": "1.0.0",
+  "date": "Thu, 26 Mar, 2020 13:43:37 -0400",
+  "exception": "Unable to find the source file for StructureDefinition/icare-care-plan-with-review: not specified, so tried StructureDefinition-icare-care-plan-with-review.xml, icare-care-plan-with-review.StructureDefinition.xml, StructureDefinition-icare-care-plan-with-review.json, StructureDefinition/icare-care-plan-with-review.xml, StructureDefinition/icare-care-plan-with-review.json, icare-care-plan-with-review.xml, and icare-care-plan-with-review.json (and lowercase resource name variants) in dirs [C:\\Users\\mkramer\\Documents\\GitHub\\fsh-icare]",
+  "version": "4.0.1",
+  "tool": "4.2.0 (3)"
+}

@@ -1,0 +1,90 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "icare",
+  "url": "http://mcodeinitiative.org/codex/us/icare/ImplementationGuide/icare",
+  "version": "1.0.0",
+  "name": "CodeXImplementationGuideICAREdata",
+  "title": "CodeX Implementation Guide: ICAREdata",
+  "status": "active",
+  "publisher": "The MITRE Corporation and Alliance Foundation Trials",
+  "contact": [
+    {
+      "name": "ICAREdata Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://alliancefoundationtrials.org/"
+        },
+        {
+          "system": "email",
+          "value": "icaredata@alliancefoundationtrials.org"
+        }
+      ]
+    }
+  ],
+  "description": "The ICAREdata project supports the prospective collection of high quality real-world data to enable clinical oncology research.",
+  "packageId": "icare",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/icare-care-plan-with-review"
+        },
+        "name": "Care Plan with Review",
+        "description": "An extended Care Plan that includes clinical reviews and documentation of changes. The Care Plan itself describes how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions. The Care Plan tracks the progress of activities associated with the plan. The review extension includes the practitioner doing the review, date of review, whether the plan was changed, a coded reason for change, and a narrative describing the change.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/icare-care-plan-review"
+        },
+        "name": "CarePlanReview",
+        "description": "Documentation of a re-assessment of the Care Plan, which may or may not lead to a revision of the plan. The fact the assessment has been conducted should be documented even when the Care Plan is not changed.\r\nImplementation note: A ReasonCode is required when ChangedFlag is true.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/icare-care-plan-change-reason-vs"
+        },
+        "name": "Care Plan Change Reason Value Set",
+        "description": "Reasons that a care plan was changed. Similar to TreatmentTerminationReasonVS",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mapping_guidance.html",
+          "title": "Mapping Guidance",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}
