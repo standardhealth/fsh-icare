@@ -1,2 +1,8 @@
-build**
+output**
+temp**
+input**
+input-cache**
+ig.ini
+package.json
+package-list.json
 .DS_Store
