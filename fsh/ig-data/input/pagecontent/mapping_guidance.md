@@ -48,9 +48,9 @@
     <th class="tg-bold">Description</th>
   </tr>
   <tr>
-    <td class="tg-bold" rowspan="3">Lesion evaluated</td>
+    <td class="tg-bold" rowspan="3">Tumor evaluated</td>
     <td class="tg-bold">Primary tumor</td>
-    <td class="tg-altbck" rowspan="2"><p>modifierExtension.relatedCancerCondition.ValueReference</p><p></p></td>
+    <td class="tg-altbck" rowspan="2"><p>Observation.focus.Reference(Cancer Condition Parent)</p><p></p></td>
     <td colspan ="3">n/a</td>
     <td class="tg-altbck"><p>This element should reference a <Condition> resource compliant with the </Condition>the <code>PrimaryCancerCondition</code> mCODE profile.</p></td>
   </tr>
@@ -61,7 +61,7 @@
   </tr>
   <tr>
       <td class="tg-bold">Not evaluated</td>
-      <td class="tg-altbck">dataAbsentReason.valueCodeableconcept</td>
+      <td class="tg-altbck">Observation.dataAbsentReason.valueCodeableconcept</td>
       <td>Observation Value Absent Reason</td>
       <td><code>not-asked</code></td>
       <td>Not Asked</td>
@@ -70,7 +70,7 @@
   <tr>
       <td class="tg-bold" rowspan="5">Status</td>
       <td class="tg-bold">No evidence of disease</td>
-      <td class="tg-altbck" rowspan="5">valueCodeableConcept</td>
+      <td class="tg-altbck" rowspan="5">Observation.value[x]:valueCodeableConcept</td>
       <td rowspan="5">ConditionStatusTrendVS</td>
       <td><code>260415000</code></td>
       <td>Not detected (qualifier)</td>
@@ -103,7 +103,7 @@
   <tr>
       <td class="tg-bold" rowspan="5">Reason</td>
       <td class="tg-bold">Imaging</td>
-      <td class="tg-altbck" rowspan="5">extension.obf-evidenceType-extension.valueCodeableConcept</td>
+      <td class="tg-altbck" rowspan="5">Observation.extension:evidenceType.value[x]:valueCodeableConcept</td>
       <td rowspan="5">CancerDiseaseStatusEvidenceTypeVS</td>
       <td><code>363679005</code></td>
       <td>Imaging (procedure)</td>
@@ -159,60 +159,60 @@
   </tr>
   <tr>
     <td class="tg-bold">No change in treatment plan</td>
-    <td class="tg-altbck">extension.obf-Review-extension.extension.obf-Changed-extension.valueBoolean = false</td>
+    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = false</td>
     <td colspan ="3">n/a</td>
   </tr>
   <tr>
       <td class="tg-bold" rowspan="2">yes-disease not responding</td>
-      <td class="tg-altbck">extension.obf-Review-extension.extension.obf-Changed-extension.valueBoolean = true</td>
+      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
       <td colspan ="3">n/a</td>
     </tr>
   <tr>
-    <td class="tg-altbck">extension.obf-Review-extension.extension.obf-ReasonCode-extension.valueCodeableConcept</td>
+    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
     <td>CarePlanChangeReasonVS</td>
     <td><code>266721009</code></td>
     <td>Absent response to treatment (situation)</td>
   </tr>
   <tr>
       <td class="tg-bold" rowspan="2">yes-due to AE/toxicity</td>
-      <td class="tg-altbck">extension.obf-Review-extension.extension.obf-Changed-extension.valueBoolean = true</td>
+      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
       <td colspan ="3">n/a</td>
     </tr>
   <tr>
-    <td class="tg-altbck">extension.obf-Review-extension.extension.obf-ReasonCode-extension.valueCodeableConcept</td>
+    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
     <td>CarePlanChangeReasonVS</td>
     <td><code>281647001</code></td>
     <td>Adverse reaction (disorder)</td>
   </tr>
   <tr>
       <td class="tg-bold" rowspan="2">yes-planned change</td>
-      <td class="tg-altbck">extension.obf-Review-extension.extension.obf-Changed-extension.valueBoolean = true</td>
+      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
       <td colspan ="3">n/a</td>
     </tr>
   <tr>
-    <td class="tg-altbck">extension.obf-Review-extension.extension.obf-ReasonCode-extension.valueCodeableConcept</td>
+    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
     <td>CarePlanChangeReasonVS</td>
     <td><code>405613005</code></td>
     <td>Planned Procedure (situation)</td>
   </tr>
   <tr>
       <td class="tg-bold" rowspan="2">yes-due to patient request</td>
-      <td class="tg-altbck">extension.obf-Review-extension.extension.obf-Changed-extension.valueBoolean = true</td>
+      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
       <td colspan ="3">n/a</td>
     </tr>
   <tr>
-    <td class="tg-altbck">extension.obf-Review-extension.extension.obf-ReasonCode-extension.valueCodeableConcept</td>
+    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
     <td>CarePlanChangeReasonVS</td>
     <td><code>182890002</code></td>
     <td>Patient requests alternative treatment (finding)</td>
   </tr>
   <tr>
       <td class="tg-bold" rowspan="2">yes-due to other</td>
-      <td class="tg-altbck">extension.obf-Review-extension.extension.obf-Changed-extension.valueBoolean = true</td>
+      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
       <td colspan ="3">n/a</td>
     </tr>
   <tr>
-    <td class="tg-altbck">extension.obf-Review-extension.extension.obf-ReasonCode-extension.valueCodeableConcept</td>
+    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
     <td>CarePlanChangeReasonVS</td>
     <td><code>74964007</code></td>
     <td>Other (qualifier value)</td>
