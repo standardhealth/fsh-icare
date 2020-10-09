@@ -1,9 +1,6 @@
 output**
 temp**
 template**
-input**
 input-cache**
-ig.ini
-package.json
-package-list.json
+fsh-generated**
 .DS_Store
