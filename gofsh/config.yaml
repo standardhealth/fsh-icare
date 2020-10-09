@@ -1,0 +1,6 @@
+canonical: http://mcodeinitiative.org/codex/us/icare
+fhirVersion: 4.0.1
+id: icare
+name: CodeXImplementationGuideICAREdata
+status: active
+version: 1.0.0

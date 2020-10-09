@@ -1,0 +1,17 @@
+id: icare
+canonical: http://mcodeinitiative.org/codex/us/icare
+name: CodeXImplementationGuideICAREdata
+title: "CodeX Implementation Guide: ICAREdata"
+description: The ICAREdata project supports the prospective collection of high quality real-world data to enable clinical oncology research.
+status: active
+license: CC0-1.0
+version: 1.0.0
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ci-build
+publisher:
+  name: The MITRE Corporation and Alliance Foundation Trials
+  url: https://alliancefoundationtrials.org/
+  email: icaredata@alliancefoundationtrials.org
+dependencies:
+  hl7.fhir.us.core: 3.1.0

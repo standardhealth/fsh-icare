@@ -1,0 +1,217 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "icare-care-plan-review",
+  "url": "http://mcodeinitiative.org/codex/us/icare/StructureDefinition/icare-care-plan-review",
+  "version": "1.0.0",
+  "name": "CarePlanReview",
+  "status": "active",
+  "description": "Documentation of a re-assessment of the Care Plan, which may or may not lead to a revision of the plan. The fact the assessment has been conducted should be documented even when the Care Plan is not changed.\r\nImplementation note: A ReasonCode is required when ChangedFlag is true.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:ReviewedBy",
+        "path": "Extension.extension",
+        "sliceName": "ReviewedBy",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:ReviewedBy.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:ReviewedBy.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "ReviewedBy"
+      },
+      {
+        "id": "Extension.extension:ReviewedBy.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ReviewedBy.valueReference",
+        "path": "Extension.extension.valueReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ReviewDate",
+        "path": "Extension.extension",
+        "sliceName": "ReviewDate",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:ReviewDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:ReviewDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "ReviewDate"
+      },
+      {
+        "id": "Extension.extension:ReviewDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ChangedFlag",
+        "path": "Extension.extension",
+        "sliceName": "ChangedFlag",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:ChangedFlag.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:ChangedFlag.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "ChangedFlag"
+      },
+      {
+        "id": "Extension.extension:ChangedFlag.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:CarePlanChangeReason",
+        "path": "Extension.extension",
+        "sliceName": "CarePlanChangeReason",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:CarePlanChangeReason.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:CarePlanChangeReason.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "CarePlanChangeReason"
+      },
+      {
+        "id": "Extension.extension:CarePlanChangeReason.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:CarePlanChangeReason.valueCodeableConcept",
+        "path": "Extension.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://mcodeinitiative.org/codex/us/icare/ValueSet/icare-care-plan-change-reason-vs"
+        }
+      },
+      {
+        "id": "Extension.extension:CommentOrDescription",
+        "path": "Extension.extension",
+        "sliceName": "CommentOrDescription",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:CommentOrDescription.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:CommentOrDescription.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "CommentOrDescription"
+      },
+      {
+        "id": "Extension.extension:CommentOrDescription.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://mcodeinitiative.org/codex/us/icare/StructureDefinition/icare-care-plan-review"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}
