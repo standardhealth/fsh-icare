@@ -48,7 +48,7 @@
     <th class="tg-bold">Description</th>
   </tr>
   <tr>
-    <td class="tg-bold" rowspan="3">Tumor evaluated</td>
+    <td class="tg-bold" rowspan="2">Tumor evaluated</td>
     <td class="tg-bold">Primary tumor</td>
     <td class="tg-altbck" rowspan="2"><p>Observation.focus.Reference(Cancer Condition Parent)</p><p></p></td>
     <td colspan ="3">n/a</td>
@@ -59,16 +59,8 @@
       <td colspan="3">n/a</td>
       <td class="tg-altbck"><p>This element should reference a <Condition> resource compliant with the </Condition>the <code>SecondaryCancerCondition</code> mCODE profile.</p></td>
   </tr>
-  <tr>
-      <td class="tg-bold">Not evaluated</td>
-      <td class="tg-altbck">Observation.dataAbsentReason.valueCodeableconcept</td>
-      <td>Observation Value Absent Reason</td>
-      <td><code>not-asked</code></td>
-      <td>Not Asked</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="5">Status</td>
+   <tr>
+      <td class="tg-bold" rowspan="6">Status</td>
       <td class="tg-bold">No evidence of disease</td>
       <td class="tg-altbck" rowspan="5">Observation.value[x]:valueCodeableConcept</td>
       <td rowspan="5">ConditionStatusTrendVS</td>
@@ -98,6 +90,14 @@
       <td class="tg-bold">Undetermined</td>
       <td><code>709137006</code></td>
       <td>Patient condition undetermined (finding)</td>
+      <td class="tg-altbck"></td>
+  </tr>
+   <tr>
+      <td class="tg-bold">Not evaluated</td>
+      <td class="tg-altbck">Observation.dataAbsentReason.valueCodeableconcept</td>
+      <td>Observation Value Absent Reason</td>
+      <td><code>not-asked</code></td>
+      <td>Not Asked</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
