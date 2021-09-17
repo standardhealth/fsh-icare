@@ -21,8 +21,8 @@
       <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
       <xsl:for-each select="f:definition/f:grouping">
         <xsl:variable name="relevantResources">
-          <xsl:for-each select="f:resource[not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion'] or $version) or (f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion']/f:valueCode/@value=$version)]|
-          parent::f:definition/f:resource[f:package/@value=current()/@id or f:groupingId/@value=current()/@id][not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion'] or $version) or (f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion']/f:valueCode/@value=$version)]">content</xsl:for-each>
+          <xsl:for-each select="f:resource[f:extension[@url='http://hl7.org/fhir/StructureDefinition/implementationguide-page']][not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion'] or $version) or (f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion']/f:valueCode/@value=$version)]|
+          parent::f:definition/f:resource[f:extension[@url='http://hl7.org/fhir/StructureDefinition/implementationguide-page']][f:package/@value=current()/@id or f:groupingId/@value=current()/@id][not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion'] or $version) or (f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion']/f:valueCode/@value=$version)]">content</xsl:for-each>
         </xsl:variable>
         <xsl:if test="$relevantResources">
           <a name="{position()}">
@@ -37,10 +37,14 @@
     </div>
   </xsl:template>
   <xsl:template match="f:grouping">
-    <p>
-      <xsl:value-of select="f:description/@value"/>
+    <p> 
+      <xsl:text>{% capture grouping_desc %}</xsl:text>
+      <xsl:value-of select="f:description/@value" disable-output-escaping="no"/>
+       <xsl:text>{% endcapture %}
+    {{ grouping_desc | markdownify}}</xsl:text>
     </p>
     <p>
+      <xsl:variable name="showDescriptions" select="count(parent::f:definition/f:resource[f:groupingId/@value=current()/@id]/f:description/@value)!=0"/>
       <table class="grid">
         <col style="width:20%"/>
         <tbody>
@@ -59,9 +63,14 @@
                   </xsl:choose>
                 </a>
               </td>
-              <td>
-                <xsl:value-of select="f:description/@value" disable-output-escaping="no"/>
-              </td>
+              <xsl:if test="$showDescriptions">
+                <td>
+                  <xsl:text>{% capture desc %}</xsl:text>
+                  <xsl:value-of select="f:description/@value" disable-output-escaping="no"/>
+                  <xsl:text>{% endcapture %}
+{{ desc | markdownify}}</xsl:text>
+                </td>
+              </xsl:if>
             </tr>
           </xsl:for-each>
         </tbody>
