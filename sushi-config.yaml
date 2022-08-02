@@ -17,6 +17,9 @@ description: The ICAREdata project supports the prospective collection of high q
   real-world data to enable clinical oncology research.
 license: CC0-1.0
 fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.mcode: 2.0.0
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
@@ -29,7 +32,7 @@ pages:
     title: Mapping Guidance
 
 menu:
-  IG Home: index.html
-  Table of Contents: toc.html
+  Home: index.html
+  Implementation: mapping_guidance.html
   Artifact Index: artifacts.html
   

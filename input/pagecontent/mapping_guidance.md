@@ -17,27 +17,26 @@
 
 <h1>ICAREdata&reg; Structured Phrases to mCODE&trade; Mapping Guidance</h1>
 
-<p>There are currently two structured phrases, including:</p>
+<p>There are currently two ICAREdata structured questions, including:</p>
   <ul>
     <li><strong>Cancer Disease Status</strong>, which maps to the mCODE CancerDiseaseStatus profile; and</li>
     <li><strong>Cancer Treatment Plan Change</strong>, which maps to the CarePlanWithReview profile defined in this implementation guide.</li>
   </ul>
-<p>The mapping details for each structured phrase are provided below, and are aligned with mCODE v1.0 FHIR R4.</p>
+<p>The mapping details for each structured phrase are provided below.</p>
 
 <h2>Cancer Disease Status</h2>
 
-  <p>The Cancer Disease Status structured phrase maps to the mCODE CancerDiseaseStatus profile. Mapping details are provided in Table 1 below. </p>
-  <p>For more information on the CancerDiseaseStatus profile, please consult the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE specification</a>.</p>
+  <p>The Cancer Disease Status question maps to the mCODE CancerDiseaseStatus profile. Mapping details are provided in Table 1 below. For more information on the CancerDiseaseStatus profile, please consult the <a href="http://hl7.org/fhir/us/mcode/" target="_blank">mCODE specification</a>.</p>
 
 <table class="tg">
-  <caption>Table 1. Mapping of ICAREdata Cancer Disease Status structured phrase to the mCODE CancerDiseaseStatus profile</caption>
+  <caption>Table 1. Mapping of ICAREdata Cancer Disease Status question to the mCODE CancerDiseaseStatus profile</caption>
   <tr>
-    <th class="tg-bold" colspan="2">ICAREdata Cancer Disease Status Phrase</th>
-    <th class="tg-bold" colspan="5">mCODE v1.0 FHIR R4 CancerDiseaseStatus Profile Mapping</th>
+    <th class="tg-bold" colspan="2">ICAREdata Cancer Disease Status Question</th>
+    <th class="tg-bold" colspan="5">mCODE CancerDiseaseStatus Profile Mapping</th>
   </tr>
   <tr>
-    <th class="tg-bold" rowspan="2">Phrase Component</th>
-    <th class="tg-bold" rowspan="2">Phrase Component Value</th>
+    <th class="tg-bold" rowspan="2">Component</th>
+    <th class="tg-bold" rowspan="2">Component Value</th>
     <th class="tg-bold" rowspan="2">FHIR Profile Element</th>
     <th class="tg-bold" colspan="3">Terminology Binding</th>
     <th class="tg-bold" rowspan="2">Notes</th>
@@ -64,8 +63,8 @@
       <td class="tg-bold">No evidence of disease</td>
       <td class="tg-altbck" rowspan="5">Observation.value[x]:valueCodeableConcept</td>
       <td rowspan="5">ConditionStatusTrendVS</td>
-      <td><code>260415000</code></td>
-      <td>Not detected (qualifier)</td>
+      <td><code>550991000124107</code></td>
+      <td>Malignant neoplasm in full remission (disorder)</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
@@ -117,8 +116,8 @@
   </tr>
   <tr>
       <td class="tg-bold">Symptoms</td>
-      <td><code>711015009</code></td>
-      <td>Assessment of symptom control (procedure)</td>
+      <td><code>409060008</code></td>
+      <td>Evaluation for signs and symptoms of physical health problems (procedure)</td>
       <td class="tg-altbck"></td>
   </tr>
   <tr>
@@ -137,18 +136,18 @@
 
 <h2>Cancer Treatment Plan Change</h2>
 
-<p>The ICAREdata Cancer Treatment Plan Change structured phrase maps to the CodeX ICAREdata FHIR profile CarePlanWithReview defined in this implementation guide.</p>
+<p>The ICAREdata Cancer Treatment Plan Change question maps to the CodeX ICAREdata FHIR profile CarePlanWithReview defined in this implementation guide.</p>
 
-<p>The allowable values for the structured phrase include information about whether a treatment change was made, as well as a reason, when a change did take place. In the CarePlanWithReview profile, this translates into two separate elements: one that captures whether a change took place, and another that holds the reason for the change. Mapping details for this structured phrase are provided in Table 2 below.</p>
+<p>The allowable values for the question include information about whether a treatment change was made, as well as a reason, when a change did take place. In the CarePlanWithReview profile, this translates into two separate elements: one that captures whether a change took place, and another that holds the reason for the change. Mapping details for this question are provided in Table 2 below.</p>
 
 <table class="tg">
-  <caption>Table 2. Mapping of ICAREdata Cancer Treatment Plan Change structured phrase to the CodeX ICAREdata CarePlanWithReview profile</caption>
+  <caption>Table 2. Mapping of ICAREdata Cancer Treatment Plan Change question to the CodeX ICAREdata CarePlanWithReview profile</caption>
   <tr>
-    <th class="tg-bold">ICAREdata Cancer Treatment Plan Change Phrase</th>
+    <th class="tg-bold">ICAREdata Cancer Treatment Plan Change Question</th>
     <th class="tg-bold" colspan="4">ICAREdata CarePlanWithReview Profile Mapping</th>
   </tr>
   <tr>
-    <th class="tg-bold" rowspan="2">Phrase Value</th>
+    <th class="tg-bold" rowspan="2">Question Value</th>
     <th class="tg-bold" rowspan="2">FHIR Profile Element</th>
     <th class="tg-bold" colspan="3">Terminology Binding</th>
   </tr>
