@@ -24,13 +24,11 @@ parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
 releaseLabel: CI Build
-
 pages:
   index.md:
     title: Home
   mapping_guidance.md:
     title: Mapping Guidance
-
 menu:
   Home: index.html
   Implementation: mapping_guidance.html

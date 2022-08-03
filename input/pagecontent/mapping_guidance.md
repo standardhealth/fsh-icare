@@ -15,14 +15,14 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
-<h1>ICAREdata&reg; Structured Phrases to mCODE&trade; Mapping Guidance</h1>
+<h1>ICAREdata&reg; Questions to mCODE&trade; Mapping Guidance</h1>
 
-<p>There are currently two ICAREdata structured questions, including:</p>
+<p>There are currently two ICAREdata questions, including:</p>
   <ul>
     <li><strong>Cancer Disease Status</strong>, which maps to the mCODE CancerDiseaseStatus profile; and</li>
     <li><strong>Cancer Treatment Plan Change</strong>, which maps to the CarePlanWithReview profile defined in this implementation guide.</li>
   </ul>
-<p>The mapping details for each structured phrase are provided below.</p>
+<p>The mapping details for each question are provided below.</p>
 
 <h2>Cancer Disease Status</h2>
 
