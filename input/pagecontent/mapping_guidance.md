@@ -1,221 +1,70 @@
-<style type="text/css">
-    .tg  {font-size:90%;border-collapse:collapse;border-spacing:0;border-color:#ccc;margin-left:auto; margin-right:auto; width:80%}
-    .tg td{padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:bold;border-top-width:1px;border-bottom-width:1px;border-color:#ccc;color:#333;background-color:#fff;text-align:center;vertical-align:middle}
-    .tg th{font-weight:bold;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#ccc;color:#333;background-color:#f0f0f0;text-align:center;vertical-align:middle}
-    .tg caption{padding:10px 5px; font-weight:bold}
-    .tg .tg-bold{font-weight:bold;border-color:inherit;text-align:center;vertical-align:middle}
-    .tg .tg-altbck{background-color:#f9f9f9;border-color:inherit;text-align:center;vertical-align:middle}
-    .tg .tg-altbck-bold{background-color:#f9f9f9;font-weight:bold;border-color:inherit;text-align:center;vertical-align:middle}
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-}
-    </style>
+### ICAREdata&reg; Questions to mCODE&trade; Mapping Guidance
 
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+There are currently two ICAREdata questions, including:
+* **Cancer Disease Status**, which maps to the mCODE CancerDiseaseStatus profile; and
+* **Cancer Treatment Plan Change**, which maps to the CarePlanWithReview profile defined in this implementation guide.
 
-<h1>ICAREdata&reg; Questions to mCODE&trade; Mapping Guidance</h1>
+The mapping details for each question are provided below.
 
-<p>There are currently two ICAREdata questions, including:</p>
-  <ul>
-    <li><strong>Cancer Disease Status</strong>, which maps to the mCODE CancerDiseaseStatus profile; and</li>
-    <li><strong>Cancer Treatment Plan Change</strong>, which maps to the CarePlanWithReview profile defined in this implementation guide.</li>
-  </ul>
-<p>The mapping details for each question are provided below.</p>
+#### Cancer Disease Status Question
 
-<h2>Cancer Disease Status</h2>
+The figure below shows the format of the ICAREdata Cancer Disease Status (CDS) question. 
 
-  <p>The Cancer Disease Status question maps to the mCODE CancerDiseaseStatus profile. Mapping details are provided in Table 1 below. For more information on the CancerDiseaseStatus profile, please consult the <a href="http://hl7.org/fhir/us/mcode/" target="_blank">mCODE specification</a>.</p>
+<img src="CancerDiseaseStatusQuestionFormat.png" alt="Cancer Disease Status Question Format" width="40%" style="float:none; margin: 0px 0px 0px 0px;" />
 
-<table class="tg">
-  <caption>Table 1. Mapping of ICAREdata Cancer Disease Status question to the mCODE CancerDiseaseStatus profile</caption>
-  <tr>
-    <th class="tg-bold" colspan="2">ICAREdata Cancer Disease Status Question</th>
-    <th class="tg-bold" colspan="5">mCODE CancerDiseaseStatus Profile Mapping</th>
-  </tr>
-  <tr>
-    <th class="tg-bold" rowspan="2">Component</th>
-    <th class="tg-bold" rowspan="2">Component Value</th>
-    <th class="tg-bold" rowspan="2">FHIR Profile Element</th>
-    <th class="tg-bold" colspan="3">Terminology Binding</th>
-    <th class="tg-bold" rowspan="2">Notes</th>
-  </tr>
-  <tr>
-    <th class="tg-bold">Value Set</th>
-    <th class="tg-bold">Code</th>
-    <th class="tg-bold">Description</th>
-  </tr>
-  <tr>
-    <td class="tg-bold" rowspan="2">Tumor evaluated</td>
-    <td class="tg-bold">Primary tumor</td>
-    <td class="tg-altbck" rowspan="2"><p>Observation.focus.Reference(Cancer Condition Parent)</p><p></p></td>
-    <td colspan ="3">n/a</td>
-    <td class="tg-altbck"><p>This element should reference a <Condition> resource compliant with the </Condition>the <code>PrimaryCancerCondition</code> mCODE profile.</p></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Metastatic tumor</td>
-      <td colspan="3">n/a</td>
-      <td class="tg-altbck"><p>This element should reference a <Condition> resource compliant with the </Condition>the <code>SecondaryCancerCondition</code> mCODE profile.</p></td>
-  </tr>
-   <tr>
-      <td class="tg-bold" rowspan="6">Status</td>
-      <td class="tg-bold">No evidence of disease</td>
-      <td class="tg-altbck" rowspan="5">Observation.value[x]:valueCodeableConcept</td>
-      <td rowspan="5">ConditionStatusTrendVS</td>
-      <td><code>550991000124107</code></td>
-      <td>Malignant neoplasm in full remission (disorder)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Responding</td>
-      <td><code>268910001</code></td>
-      <td>Patient condition improved (finding)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Stable</td>
-      <td><code>359746009</code></td>
-      <td>Patient's condition stable (finding)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Progressing</td>
-      <td><code>271299001</code></td>
-      <td>Patient's condition worsened (finding)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Undetermined</td>
-      <td><code>709137006</code></td>
-      <td>Patient condition undetermined (finding)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-   <tr>
-      <td class="tg-bold">Not evaluated</td>
-      <td class="tg-altbck">Observation.dataAbsentReason.valueCodeableconcept</td>
-      <td>Observation Value Absent Reason</td>
-      <td><code>not-asked</code></td>
-      <td>Not Asked</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="5">Reason</td>
-      <td class="tg-bold">Imaging</td>
-      <td class="tg-altbck" rowspan="5">Observation.extension:evidenceType.value[x]:valueCodeableConcept</td>
-      <td rowspan="5">CancerDiseaseStatusEvidenceTypeVS</td>
-      <td><code>363679005</code></td>
-      <td>Imaging (procedure)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Pathology</td>
-      <td><code>252416005</code></td>
-      <td>Histopathology test (procedure)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Symptoms</td>
-      <td><code>409060008</code></td>
-      <td>Evaluation for signs and symptoms of physical health problems (procedure)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Physical exam</td>
-      <td><code>5880005</code></td>
-      <td>Physical examination procedure (procedure)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-  <tr>
-      <td class="tg-bold">Lab results</td>
-      <td><code>386344002</code></td>
-      <td>Laboratory data interpretation (procedure)</td>
-      <td class="tg-altbck"></td>
-  </tr>
-</table>
+This question maps to the mCODE Cancer Disease Status profile. For more information on the Cancer Disease Status profile, please consult the [mCODE specification](http://hl7.org/fhir/us/mcode/).
 
-<h2>Cancer Treatment Plan Change</h2>
+The *tumor evaluated* component of the ICAREdata CDS question maps to `CancerDiseaseStatus.focus` where *primary tumor(s)* should reference a resource compliant with the mCODE Primary Cancer Condition profile and *metastatic tumor(s)* should reference a resource compliant with the mCODE Secondary Cancer Condition profile. 
 
-<p>The ICAREdata Cancer Treatment Plan Change question maps to the CodeX ICAREdata FHIR profile CarePlanWithReview defined in this implementation guide.</p>
+The *status value* component of the ICAREdata CDS question maps to `CancerDiseaseStatus.value[x]` with a code from the [Condition Status Trend Value Set](http://hl7.org/fhir/us/mcode/ValueSet-mcode-condition-status-trend-vs.html). The table below shows the mapping between the ICAREdata *status* values and the corresponding codes from the mCODE value set. 
 
-<p>The allowable values for the question include information about whether a treatment change was made, as well as a reason, when a change did take place. In the CarePlanWithReview profile, this translates into two separate elements: one that captures whether a change took place, and another that holds the reason for the change. Mapping details for this question are provided in Table 2 below.</p>
+| ICAREdata Status value | Code | Code System Description |
+|---|:---:|---|
+| No evidence of disease | 550991000124107 | Malignant neoplasm in full remission (disorder) |
+| Responding | 268910001 | Patient condition improved (finding) |
+| Stable | 359746009 | Patient's condition stable (finding) |
+| Progressing | 271299001 | Patient's condition worsened (finding) | 
+| Undetermined | 709137006 | Patient condition undetermined (finding) |
+| Not evaluated | DataAbsentReason.not-asked | Not Asked |
+{: .grid }
 
-<table class="tg">
-  <caption>Table 2. Mapping of ICAREdata Cancer Treatment Plan Change question to the CodeX ICAREdata CarePlanWithReview profile</caption>
-  <tr>
-    <th class="tg-bold">ICAREdata Cancer Treatment Plan Change Question</th>
-    <th class="tg-bold" colspan="4">ICAREdata CarePlanWithReview Profile Mapping</th>
-  </tr>
-  <tr>
-    <th class="tg-bold" rowspan="2">Question Value</th>
-    <th class="tg-bold" rowspan="2">FHIR Profile Element</th>
-    <th class="tg-bold" colspan="3">Terminology Binding</th>
-  </tr>
-  <tr>
-    <th class="tg-bold">Value Set</th>
-    <th class="tg-bold">Code</th>
-    <th class="tg-bold">Description</th>
-  </tr>
-  <tr>
-    <td class="tg-bold">No change in treatment plan</td>
-    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = false</td>
-    <td colspan ="3">n/a</td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="2">yes-disease not responding</td>
-      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
-      <td colspan ="3">n/a</td>
-    </tr>
-  <tr>
-    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
-    <td>CarePlanChangeReasonVS</td>
-    <td><code>266721009</code></td>
-    <td>Absent response to treatment (situation)</td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="2">yes-due to AE/toxicity</td>
-      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
-      <td colspan ="3">n/a</td>
-    </tr>
-  <tr>
-    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
-    <td>CarePlanChangeReasonVS</td>
-    <td><code>281647001</code></td>
-    <td>Adverse reaction (disorder)</td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="2">yes-planned change</td>
-      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
-      <td colspan ="3">n/a</td>
-    </tr>
-  <tr>
-    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
-    <td>CarePlanChangeReasonVS</td>
-    <td><code>405613005</code></td>
-    <td>Planned Procedure (situation)</td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="2">yes-due to patient request</td>
-      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
-      <td colspan ="3">n/a</td>
-    </tr>
-  <tr>
-    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
-    <td>CarePlanChangeReasonVS</td>
-    <td><code>182890002</code></td>
-    <td>Patient requests alternative treatment (finding)</td>
-  </tr>
-  <tr>
-      <td class="tg-bold" rowspan="2">yes-due to other</td>
-      <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:ChangedFlag = true</td>
-      <td colspan ="3">n/a</td>
-    </tr>
-  <tr>
-    <td class="tg-altbck">CarePlan.extension:carePlanReview.extension:CarePlanChangeReason.value[x]:valueCodeableConcept</td>
-    <td>CarePlanChangeReasonVS</td>
-    <td><code>74964007</code></td>
-    <td>Other (qualifier value)</td>
-  </tr>
-</table>
 
-</div>
+The *reason value* component of the ICAREdata CDS question maps to `CancerDiseaseStatus.mcode-cancer-disease-status-evidence-type` with a code from the [Cancer Disease Status Evidence Type Value Set](http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disease-status-evidence-type-vs.html). The table below shows the mapping between the ICAREdata *reason* values and the corresponding codes from the mCODE value set. 
+
+| ICAREdata Reason value | Code | Code System Description |
+|---|:---:|---|
+| Imaging | 363679005 | Imaging (procedure) |
+| Pathology | 252416005 | Histopathology test (procedure) |
+| Symptoms | 409060008 | Evaluation for signs and symptoms of physical health problems (procedure) |
+| Physical exam | 5880005 | Physical examination procedure (procedure) |
+| Lab results | 386344002 | Laboratory data interpretation (procedure) |
+{: .grid }
+
+For CDS, ICAREdata additionally requires the date the disease status was observed which maps to `CancerDiseaseStatus.effective[x]`.
+
+#### Cancer Treatment Plan Change Question
+
+The figure below shows the format of the ICAREdata Cancer Treatment Plan Change (CTPC) question. 
+
+<img src="TreatmentPlanChangeQuestionFormat.png" alt="Cancer Treatment Plan Change Question Format" width="40%" style="float:none; margin: 0px 0px 0px 0px;" />
+
+This question maps to the CodeX ICAREdata FHIR profile CarePlanWithReview defined in this implementation guide.
+
+The allowable values for the CTPC question include information about whether a treatment change was made, as well as a reason, when a change did take place. In the CarePlanWithReview profile, this translates into two separate elements: one that captures whether a change took place, and another that holds the reason for the change. 
+
+When there is *no change* in treatment plan `CarePlanWithReview.carePlanReview.ChangedFlag = false`.
+
+When *yes* change in treatment plan `CarePlanWithReview.carePlanReview.ChangedFlag = true`, and a *reason code* is specified using `CarePlanWithReview.carePlanReview.CarePlanChangeReason`. 
+
+The table below shows the mapping between the ICAREdata *CTPC* values to the reason codes from the [Care Plan Change Reason Value Set](ValueSet-icare-care-plan-change-reason-vs.html).
+
+| ICAREdata CTPC value | Code | Code System Description |
+|---|:---:|---|
+| yes-disease-not-responding | 266721009 | Absent response to treatment (situation) |
+| yes-due to AE/toxicity | 281647001 | Adverse reaction (disorder) |
+| yes-planned change | 405613005 | Planned Procedure (situation) |
+| yes-due to patient request | 182890002 | Patient requests alternative treatment (finding) |
+| yes-due to other | 74964007 | Other (qualifier value) |
+{: .grid }
+
+For CTPC, ICAREdata additionally requires the date for the treatment change which maps to `CarePlanWithReview.carePlanReview.ReviewDate`.
