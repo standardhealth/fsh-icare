@@ -1,4 +1,4 @@
-### ICAREdata&reg; Questions to mCODE&trade; Mapping Guidance
+### ICAREdata&reg; Questions to mCODE&trade; STU 2 Mapping Guidance
 
 There are currently two ICAREdata questions, including:
 * **Cancer Disease Status**, which maps to the mCODE CancerDiseaseStatus profile; and
@@ -18,29 +18,31 @@ The *tumor evaluated* component of the ICAREdata CDS question maps to `CancerDis
 
 The *status value* component of the ICAREdata CDS question maps to `CancerDiseaseStatus.value[x]` with a code from the [Condition Status Trend Value Set](http://hl7.org/fhir/us/mcode/ValueSet-mcode-condition-status-trend-vs.html). The table below shows the mapping between the ICAREdata *status* values and the corresponding codes from the mCODE value set. 
 
-| ICAREdata Status value | Code | Code System Description |
+| ICAREdata Status value | Code | Code Description |
 |---|:---:|---|
-| No evidence of disease | 550991000124107 | Malignant neoplasm in full remission (disorder) |
+| No evidence of disease[^1]| 550991000124107 | Malignant neoplasm in full remission (disorder) |
 | Responding | 268910001 | Patient condition improved (finding) |
 | Stable | 359746009 | Patient's condition stable (finding) |
 | Progressing | 271299001 | Patient's condition worsened (finding) | 
 | Undetermined | 709137006 | Patient condition undetermined (finding) |
 | Not evaluated | DataAbsentReason.not-asked | Not Asked |
 {: .grid }
+[^1]: In mCODE STU1, the code for status *No evidence of disease* is 260415000
 
 
 The *reason value* component of the ICAREdata CDS question maps to `CancerDiseaseStatus.mcode-cancer-disease-status-evidence-type` with a code from the [Cancer Disease Status Evidence Type Value Set](http://hl7.org/fhir/us/mcode/ValueSet-mcode-cancer-disease-status-evidence-type-vs.html). The table below shows the mapping between the ICAREdata *reason* values and the corresponding codes from the mCODE value set. 
 
-| ICAREdata Reason value | Code | Code System Description |
+| ICAREdata Reason value | Code | Code Description |
 |---|:---:|---|
 | Imaging | 363679005 | Imaging (procedure) |
 | Pathology | 252416005 | Histopathology test (procedure) |
-| Symptoms | 409060008 | Evaluation for signs and symptoms of physical health problems (procedure) |
+| Symptoms[^2] | 409060008 | Evaluation for signs and symptoms of physical health problems (procedure) |
 | Physical exam | 5880005 | Physical examination procedure (procedure) |
 | Lab results | 386344002 | Laboratory data interpretation (procedure) |
 {: .grid }
+[^2]: In mCODE STU1, the code for reason *Symptoms* is 711015009
 
-For CDS, ICAREdata additionally requires the date the disease status was observed which maps to `CancerDiseaseStatus.effective[x]`.
+For CDS, ICAREdata additionally requires the date the disease status was observed, which maps to `CancerDiseaseStatus.effective[x]`.
 
 #### Cancer Treatment Plan Change Question
 
@@ -58,7 +60,7 @@ When *yes* change in treatment plan `CarePlanWithReview.carePlanReview.ChangedFl
 
 The table below shows the mapping between the ICAREdata *CTPC* values to the reason codes from the [Care Plan Change Reason Value Set](ValueSet-icare-care-plan-change-reason-vs.html).
 
-| ICAREdata CTPC value | Code | Code System Description |
+| ICAREdata CTPC value | Code | Code Description |
 |---|:---:|---|
 | yes-disease-not-responding | 266721009 | Absent response to treatment (situation) |
 | yes-due to AE/toxicity | 281647001 | Adverse reaction (disorder) |
@@ -67,4 +69,7 @@ The table below shows the mapping between the ICAREdata *CTPC* values to the rea
 | yes-due to other | 74964007 | Other (qualifier value) |
 {: .grid }
 
-For CTPC, ICAREdata additionally requires the date for the treatment change which maps to `CarePlanWithReview.carePlanReview.ReviewDate`.
+For CTPC, ICAREdata additionally requires the date when the treatment change was noted, which maps to `CarePlanWithReview.carePlanReview.ReviewDate`.
+
+#### mCODE STU 1 Notes
+For ICAREdata implementations using mCODE STU 1, the code for some of the ICAREdata values changed in mCODE STU 2.

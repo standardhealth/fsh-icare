@@ -1,14 +1,11 @@
 
 ### About the ICAREdata&reg; Project
 
-The overall goal of the [ICAREdata project](http://icaredata.org/) is to support the prospective collection of high quality real-world data, based on [mCODE&trade;](https://confluence.hl7.org/display/COD/mCODE/), to enable clinical oncology research.
-
-The Integrating Clinical trials And Real-world Endpoints data (ICAREdata) project is a collaboration between The MITRE Corporation, the Alliance for Clinical Trials in Oncology, and the National Cancer Institute (NCI). The project is conducting a study to demonstrate the ability to use high-quality mCODE-based real-world data in a clinical trial setting.
+The Integrating Clinical trials And Real-world Endpoints data (ICAREdata) project is a collaboration between The MITRE Corporation, the Alliance for Clinical Trials in Oncology, and the National Cancer Institute (NCI). The overall goal of the [ICAREdata project](http://icaredata.org/) is to support the prospective collection of high quality real-world data, based on [mCODE&trade;](https://confluence.hl7.org/display/COD/mCODE/), short for minimal Common Oncology Data Elements, to enable clinical oncology research. The project is conducting a study to demonstrate the ability to use high-quality mCODE-based real-world data in a clinical trial setting.
 
 ### ICAREdata and mCODE
 
-This implementation guide intends to cover content necessary for ICAREdata that is not part of the [mCODE specification](http://hl7.org/fhir/us/mcode). Implementers should refer directly to mCODE for the specification of all mCODE elements.
-The mCODE implementation guide includes information on how to interpret conformance requirements as well as elements marked as "must support". This implementation guide follows those same guidelines.
+This implementation guide intends to cover content necessary for ICAREdata that is not part of [mCODE Standard for Trial Use 2 (STU 2)](http://hl7.org/fhir/us/mcode). Implementers should refer directly to mCODE for the specification of all mCODE elements. The mCODE implementation guide includes information on how to interpret conformance requirements as well as elements marked as "must support". This implementation guide follows those same guidelines.
 
 ### ICAREdata Questions, mCODE and the ICAREdata IG
 
