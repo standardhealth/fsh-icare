@@ -47,7 +47,7 @@ Description: "Cancer treatment plan change for ICAREdata patient"
   * extension[ReviewDate].valueDate = "2022-02-21"
 
 // Cancer Disease Status for ICAREdata Patient
-Instance: ICAREdata-mCodeCancerDiseaseStatus
+Instance: ICAREdata-CancerDiseaseStatus
 InstanceOf: mCodeCancerDiseaseStatus
 Description: "Cancer disease status for ICAREdata patient"
 * status = http://hl7.org/fhir/observation-status#final "Final"

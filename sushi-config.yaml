@@ -1,5 +1,5 @@
 id: icare
-canonical: http://mcodeinitiative.org/codex/us/icare
+canonical: https://confluence.hl7.org/display/COD/Integrated+Trial+Matching+for+Cancer+Patients+and+Providers
 version: 1.0.0
 name: CodeXImplementationGuideICAREdata
 title: "CodeX Implementation Guide: ICAREdata"
@@ -18,7 +18,7 @@ description: The ICAREdata project supports the prospective collection of high q
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.core: 4.0.0
   hl7.fhir.us.mcode: 2.0.0
 parameters:
   show-inherited-invariants: false
